@@ -1,17 +1,17 @@
 {
  "modules": {
   "island_live": {
-   "version": "0.1.1",
+   "version": "0.1.2",
    "plugin_api": 1,
-   "notes": "目標賽改以遊戲實際的目標為準；恢復育成、中途關遊戲再回來可接續",
+   "notes": "進育成畫面時自動打開建議網頁",
    "files": {
     "island_live.dll": {
-     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.1/island_live/island_live.dll",
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.2/island_live/island_live.dll",
      "blake3": "3cb91fff8369f4d9de18b38aa431c37b328a0f1360c1d359988af9657c1d6895"
     },
     "island_helper.exe": {
-     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.1/island_live/island_helper.exe",
-     "blake3": "3c2cb0ca47f4281f0110cc663f67d85a4b85a1235a59a2ef26cfcc6f757eef93"
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.2/island_live/island_helper.exe",
+     "blake3": "a8584fd7310e33abce76c9bf007eefbf0d510582399d47c36b55bbfd3a7251f7"
     }
    }
   }
