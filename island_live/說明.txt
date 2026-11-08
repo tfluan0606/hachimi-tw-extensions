@@ -1,0 +1,22 @@
+﻿育成助手　安裝說明
+==================
+
+需要：台服 PC 版，並且已經安裝 Hachimi、開過一次遊戲。不需要 Python 或其他程式。
+
+安裝（只要一次）
+1. 把這個資料夾解壓到任意位置。
+2. 關掉遊戲，雙擊「安裝.bat」。
+   - 會把 island_live.dll、island_helper.exe 放進遊戲資料夾，並在 Hachimi 設定裡啟用
+     （hachimi\config.json 的 load_libraries；原設定備份成 config.json.bak）。
+   - 找不到遊戲資料夾時，會請你貼上路徑（裡面有 GameAssembly.dll 的那一層）。
+
+使用
+- 照常開遊戲，助手會自動在背景啟動；用瀏覽器打開 http://127.0.0.1:8770 看每回合的建議。
+- 只有本機看得到，不會連到外部。關遊戲時助手會一起結束。
+- 育成完成時會自動打包紀錄：%LOCALAPPDATA%\island_live\live\exports\*.zip（玩家編號、session、裝置、IP 都已移除）。
+
+移除
+- 刪掉遊戲資料夾裡的 island_live.dll、island_helper.exe、island_live.json，
+  並把 hachimi\config.json 的 "island_live.dll" 那一項刪掉（或把 config.json.bak 改回 config.json）。
+
+注意：外掛會在遊戲內讀取資料，是否違反遊戲條款、會不會被偵測，請自行評估風險。

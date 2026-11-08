@@ -1,0 +1,19 @@
+{
+ "modules": {
+  "island_live": {
+   "version": "0.1.0",
+   "plugin_api": 1,
+   "notes": "第一版",
+   "files": {
+    "island_live.dll": {
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.0/island_live/island_live.dll",
+     "blake3": "3cb91fff8369f4d9de18b38aa431c37b328a0f1360c1d359988af9657c1d6895"
+    },
+    "island_helper.exe": {
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.0/island_live/island_helper.exe",
+     "blake3": "7c3d21489756633ef2d860e920d82c1b4d4f50ee99284b44d1d8393ed78d8433"
+    }
+   }
+  }
+ }
+}
