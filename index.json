@@ -1,17 +1,17 @@
 {
  "modules": {
   "island_live": {
-   "version": "0.1.2",
+   "version": "0.1.3",
    "plugin_api": 1,
-   "notes": "進育成畫面時自動打開建議網頁",
+   "notes": "移除建議上色、誤差內標記、偏頭痛與保健室、安裝修正",
    "files": {
     "island_live.dll": {
-     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.2/island_live/island_live.dll",
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.3/island_live/island_live.dll",
      "blake3": "3cb91fff8369f4d9de18b38aa431c37b328a0f1360c1d359988af9657c1d6895"
     },
     "island_helper.exe": {
-     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.2/island_live/island_helper.exe",
-     "blake3": "a8584fd7310e33abce76c9bf007eefbf0d510582399d47c36b55bbfd3a7251f7"
+     "url": "https://raw.githubusercontent.com/tfluan0606/hachimi-tw-extensions/island_live-v0.1.3/island_live/island_helper.exe",
+     "blake3": "ba67bd5822feb1a30a7b3a3500323a2c2d8a5f1f2100ed236ca429f1d9e9db42"
     }
    }
   }

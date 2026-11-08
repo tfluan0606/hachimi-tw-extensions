@@ -1,0 +1,36 @@
+# 推「<模組>-v<版號>」tag → 打包 <模組>/ 成 zip、開 GitHub Release（第一次安裝用）
+name: release
+
+on:
+  push:
+    tags: ["*-v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 打包
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          mod="${tag%-v*}"
+          python3 - "$mod" "$tag" <<'PY'
+          import sys, zipfile, pathlib
+          mod, tag = sys.argv[1], sys.argv[2]
+          with zipfile.ZipFile(f"{tag}.zip", "w", zipfile.ZIP_DEFLATED) as z:
+              for f in sorted(pathlib.Path(mod).iterdir()):
+                  if f.is_file():
+                      z.write(f, f"{mod}/{f.name}")   # Python zipfile 會標 UTF-8 檔名，Windows 解壓中文檔名正常
+          PY
+          python3 -c "import json,sys; m=json.load(open('index.json'))['modules'][sys.argv[1]]; print(m.get('notes') or '')" "$mod" > notes.txt
+          ls -la "${tag}.zip"; cat notes.txt
+
+      - name: 開 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" "${GITHUB_REF_NAME}.zip" --title "${GITHUB_REF_NAME}" --notes-file notes.txt
